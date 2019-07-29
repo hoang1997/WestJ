@@ -1,0 +1,270 @@
+//Data Filename     :   Cnnnn_00.ADC
+//Data File Version :   v
+//Evaluator         :   name
+//Boardtype         :   AEB101
+
+
+//-------------------------------------------------------------------------------------
+//Template Control
+//Template Name     :  NR_WNC_R2_AEB_FMA1+2.ADC
+//Template Version  :  1.1
+//-------------------------------------------------------------------------------------
+
+[IDENTIFICATION]
+ID                    12:nnnn   //CAN bus address of board (ZP number)
+CHANNEL                4:0      //FIXED channel of board is always 0
+
+//-------------------------------------------------------------------------------------
+//Configure Type Protection
+
+//WARNING - do not change ANYTHING in the type protection section
+//doing so will make the configuration invlaid and the AEB will not run.
+
+[CONFIG]
+CFG_TYPE_PRTCT         7:127   //FIXED type protection for Frauscher controlled items
+TYPE_PRTCT             1:1
+TYPE_PRTCT_CODE       32:0     //CRC supplied by Frauscher
+
+//Type Protected Generic AEB config with No CHC, STS, or SYNC
+[CONFIG]
+CFG_RSR_TYPE           7:40     //FIXED wheel sensor type
+TYPE_PRTCT             1:1      //PROTECTED with type protection
+RSR_TYPE               2:3      //PROTECTED RSR123
+RESERVED               6:0
+
+[CONFIG]
+CFG_ZP                 7:13     //FIXED AEB parameters
+TYPE_PRTCT             1:1      //PROTECTED with type protection
+INTERVAL               2:1      //PROTECTED TX interval set to 40 ms
+RESERVED               2:0
+SUPERVIS_COUNT         3:1      //PROTECTED max 1 reset by STS w/out successful train
+RESERVED               1:0
+SYSTEM_COUNT           3:1      //PROTECTED >1 damping in 1 minute turns off CHC
+RESERVED               1:0
+PARTIAL_COUNT          3:1      //PROTECTED 1st Partial Traverse = permanent error
+RESERVED               1:0
+
+[CONFIG]
+CFG_DBV                7:44     //FIXED Dynamic Occupation Extension
+TYPE_PRTCT             1:1      //PROTECTED with type protection
+DBV                    2:0      //PROTECTED DBV not used
+RESERVED               6:0
+
+[CONFIG]
+CFG_BEHAV_TGGL         7:15     //FIXED AEB toggle switch behaviour
+TYPE_PRTCT             1:1      //PROTECTED with type protection
+BEHAV_RESET            3:4      //PROTECTED Last Count in override
+RESERVED               1:0
+BEHAV_SIMUL            1:0      //PROTECTED simulation via push buttons enabled
+RESERVED               3:0
+
+[CONFIG]
+CFG_CONTROL            7:7      //FIXED tracks clear to activate CHC
+TYPE_PRTCT             1:1      //PROTECTED with type protection
+SECTION                1:0      //PROTECTED Locked to prevent CHC use
+SLCT_TIMEOUT           3:0      //PROTECTED Locked to prevent CHC use
+ID                    12:0      //PROTECTED Locked to prevent CHC use
+
+[CONFIG]
+CFG_SUPERVIS_FMA1      7:3      //FIXED STS for FMA1
+TYPE_PRTCT             1:1      //PROTECTED with type protection
+LOGIC_TYPE             1:0      //PROTECTED supervisor-section locked to prevent use
+RESET_TYPE             2:0      //PROTECTED supervisor-section locked to prevent use
+RESERVED               5:0
+RESET_DELAY            8:0      //PROTECTED supervisor-section locked to prevent use
+SECTION                1:0      //PROTECTED supervisor-section locked to prevent use
+SLCT_TIMEOUT           3:0
+ID                    12:0      //PROTECTED supervisor-section locked to prevent use
+
+[CONFIG]
+CFG_SUPERVIS_FMA2      7:4      //FIXED STS for FMA2
+TYPE_PRTCT             1:1      //PROTECTED with type protection
+LOGIC_TYPE             1:0      //PROTECTED supervisor-section locked to prevent use
+RESET_TYPE             2:0      //PROTECTED supervisor-section locked to prevent use
+RESERVED               5:0
+RESET_DELAY            8:0      //PROTECTED supervisor-section locked to prevent use
+SECTION                1:0      //PROTECTED supervisor-section locked to prevent use
+SLCT_TIMEOUT           3:0
+ID                    12:0      //PROTECTED supervisor-section locked to prevent use
+
+[CONFIG]
+CFG_SYNC_FMA1          7:5      //FIXED synchronisation of FMA1
+TYPE_PRTCT             1:1      //PROTECTED with type protection
+SECTION                1:0      //PROTECTED synchronisation locked to prevent use
+SLCT_TIMEOUT           3:0      //PROTECTED synchronisation locked to prevent use
+ID                    12:0      //PROTECTED synchronisation locked to prevent use
+
+[CONFIG]
+CFG_SYNC_FMA2          7:6      //FIXED synchronisation of FMA2
+TYPE_PRTCT             1:1      //PROTECTED with type protection
+SECTION                1:0      //PROTECTED synchronisation locked to prevent use
+SLCT_TIMEOUT           3:0      //PROTECTED synchronisation locked to prevent use
+ID                    12:0      //PROTECTED synchronisation locked to prevent use
+
+[CONFIG]
+CFG_TYPE_PRTCT        7:127     //FIXED Type protection code for Generic AEB Config
+TYPE_PRTCT             1:1
+TYPE_PRTCT_CODE       32:0x39fd9610	//auto-generated TypeCRC by Frauscher CRC-Tool v1
+
+//Type Protected Configuration for Generic Track Section
+//Must be placed after 'Generic AEB with No CHC, STS, or SYNC'
+//and before 'IO-EXB Reset...' protected blocks
+
+[CONFIG]
+CFG_TIMEOUT            7:32     //FIXED Timeout 0
+TYPE_PRTCT             1:1      //PROTECTED with type protection
+TIMEOUT_VALUE          8:40     //PROTECTED time-out set at 400ms
+[CONFIG]
+CFG_TIMEOUT            7:33     //FIXED Timeout 1
+TYPE_PRTCT             1:1      //PROTECTED with type protection
+TIMEOUT_VALUE          8:40     //PROTECTED time-out set at 400ms
+[CONFIG]
+CFG_TIMEOUT            7:34     //FIXED Timeout 2
+TYPE_PRTCT             1:1      //PROTECTED with type protection
+TIMEOUT_VALUE          8:40     //PROTECTED time-out set at 400ms
+[CONFIG]
+CFG_TIMEOUT            7:35     //FIXED Timeout 3
+TYPE_PRTCT             1:1      //PROTECTED with type protection
+TIMEOUT_VALUE          8:40     //PROTECTED time-out set at 400ms
+[CONFIG]
+CFG_TIMEOUT            7:36     //FIXED Timeout 4
+TYPE_PRTCT             1:1      //PROTECTED with type protection
+TIMEOUT_VALUE          8:40     //PROTECTED time-out set at 400ms
+[CONFIG]
+CFG_TIMEOUT            7:37     //FIXED Timeout 5
+TYPE_PRTCT             1:1      //PROTECTED with type protection
+TIMEOUT_VALUE          8:40     //PROTECTED time-out set at 400ms
+[CONFIG]
+CFG_TIMEOUT            7:38     //FIXED Timeout 6
+TYPE_PRTCT             1:1      //PROTECTED with type protection
+TIMEOUT_VALUE          8:40     //PROTECTED time-out set at 400ms
+[CONFIG]
+CFG_TIMEOUT            7:39     //FIXED Timeout 7
+TYPE_PRTCT             1:1      //PROTECTED with type protection
+TIMEOUT_VALUE          8:40     //PROTECTED time-out set at 400ms
+
+[CONFIG]
+CFG_OCC                7:46     //FIXED Occupation delays
+TYPE_PRTCT             1:1      //PROTECTED with type protection
+OCC_EXT                8:10     //PROTECTED 1.0s occupancy extension
+OCC_DELAY              8:0      //PROTECTED no occupancy delay
+
+[CONFIG]
+CFG_SECTION            7:12     //FIXED AEB Reset configuration
+TYPE_PRTCT             1:1      //PROTECTED with type protection
+COMM_FAIL              1:0      //PROTECTED continue operation after coms failure
+BEHAV_GE               2:1      //PROTECTED no reset restriction on fault or power up
+CLR_TRACK              2:0      //PROTECTED sweep train must use 2 counting heads
+RESERVED               3:0
+RESET_IN               4:5      //PROTECTED pre-reset + reset (used for WNC I/F only)
+RESET_OUT              4:1      //PROTECTED reset (used for WNC I/F only)
+
+[CONFIG]
+CFG_RESET              7:48     //FIXED reset timing
+TYPE_PRTCT             1:1      //PROTECTED with type protection
+RESET_OP_TIME          8:50     //PROTECTED minimum 500 ms pulse for reset
+RESET_LD_TIME          8:1      //PROTECTED no traversing for 100ms before reset
+
+[CONFIG]
+CFG_TYPE_PRTCT        7:127     //FIXED Type protection code for Generic Track Section
+TYPE_PRTCT             1:1
+TYPE_PRTCT_CODE       32:0xfd86078	//auto-generated TypeCRC by Frauscher CRC-Tool v1
+
+//End Type Protection
+//-------------------------------------------------------------------------------------
+
+//-------------------------------------------------------------------------------------
+//Configure FMA1 - Track Section tttt
+
+//ZPaaaa
+[CONFIG]
+CFG_ZP_FMA1            7:1
+TYPE_PRTCT             1:0      //FIXED no type protection
+DIR_INV                1:B      //0 = no inversion, 1 = inversion
+SLCT_TIMEOUT           3:0      //FIXED timeout 0 used
+ID                    12:aaaa   //ID of ZP required in track section
+
+//ZPaaaa
+[CONFIG]
+CFG_ZP_FMA1            7:1
+TYPE_PRTCT             1:0      //FIXED no type protection
+DIR_INV                1:B      //0 = no inversion, 1 = inversion
+SLCT_TIMEOUT           3:0      //FIXED timeout 0 used
+ID                    12:aaaa   //ID of ZP required in track section
+
+//ZPaaaa
+[CONFIG]
+CFG_ZP_FMA1            7:1
+TYPE_PRTCT             1:0      //FIXED no type protection
+DIR_INV                1:B      //0 = no inversion, 1 = inversion
+SLCT_TIMEOUT           3:0      //FIXED timeout 0 used
+ID                    12:aaaa   //ID of ZP required in track section
+
+//ZPaaaa
+[CONFIG]
+CFG_ZP_FMA1            7:1
+TYPE_PRTCT             1:0      //FIXED no type protection
+DIR_INV                1:B      //0 = no inversion, 1 = inversion
+SLCT_TIMEOUT           3:0      //FIXED timeout 0 used
+ID                    12:aaaa   //ID of ZP required in track section
+
+DELETE THIS LINE - Placeholder for additional CFG_ZP_FMA1 blocks
+
+//End FMA1
+//-------------------------------------------------------------------------------------
+
+//-------------------------------------------------------------------------------------
+//Configure FMA2 - Track Section tttt
+
+//ZPaaaa
+[CONFIG]
+CFG_ZP_FMA2            7:2
+TYPE_PRTCT             1:0      //FIXED no type protection
+DIR_INV                1:B      //0 = no inversion, 1 = inversion
+SLCT_TIMEOUT           3:0      //FIXED timeout 0 used
+ID                    12:aaaa   //ID of ZP required in track section
+
+//ZPaaaa
+[CONFIG]
+CFG_ZP_FMA2            7:2
+TYPE_PRTCT             1:0      //FIXED no type protection
+DIR_INV                1:B      //0 = no inversion, 1 = inversion
+SLCT_TIMEOUT           3:0      //FIXED timeout 0 used
+ID                    12:aaaa   //ID of ZP required in track section
+
+//ZPaaaa
+[CONFIG]
+CFG_ZP_FMA2            7:2
+TYPE_PRTCT             1:0      //FIXED no type protection
+DIR_INV                1:B      //0 = no inversion, 1 = inversion
+SLCT_TIMEOUT           3:0      //FIXED timeout 0 used
+ID                    12:aaaa   //ID of ZP required in track section
+
+//ZPaaaa
+[CONFIG]
+CFG_ZP_FMA2            7:2
+TYPE_PRTCT             1:0      //FIXED no type protection
+DIR_INV                1:B      //0 = no inversion, 1 = inversion
+SLCT_TIMEOUT           3:0      //FIXED timeout 0 used
+ID                    12:aaaa   //ID of ZP required in track section
+
+DELETE THIS LINE - Placeholder for additional CFG_ZP_FMA2 blocks
+
+//End FMA2
+//-------------------------------------------------------------------------------------
+
+//-------------------------------------------------------------------------------------
+//Configure Project Number
+
+[CONFIG]
+CFG_PROJECT_AEB        7:16
+TYPE_PRTCT             1:0      //FIXED no type protection
+RESERVED               4:0
+PROJECT_NUMBER        20:NUM    //Project number
+
+//End Project Number
+//-------------------------------------------------------------------------------------
+
+[PROTECTION]
+COMPONENT              8:2      //Id of component, in this case: AEB101
+VERSION               48:0xYYYYMMDDhhmm     //time of data generation (0xYYYYMMDDhhmmm)

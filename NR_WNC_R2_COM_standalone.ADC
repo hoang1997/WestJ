@@ -1,6 +1,6 @@
-//Data Filename     :   Cnnnn_00.ADC
-//Data File Version :   v
-//Evaluator         :   name
+//Data Filename     :   Cnnnn_00.ADC    //CONFIGURABLE
+//Data File Version :   v               //CONFIGURABLE
+//Evaluator         :   name            //CONFIGURABLE
 //Boardtype         :   COM-WNC
 
 //IFC Filename		:	filename
@@ -13,7 +13,7 @@
 //-------------------------------------------------------------------------------------
 
 [IDENTIFICATION]
-ID                    12:nnnn       //CAN bus address of board (COM number)
+ID                    12:nnnn       //CAN bus address of board (COM number) CONFIGURABLE
 CHANNEL                4:0          //FIXED both channels of COM board
 
 //-------------------------------------------------------------------------------------
@@ -22,42 +22,42 @@ CHANNEL                4:0          //FIXED both channels of COM board
 //Network A IP address
 [CONFIG]
 CFG_MY_IP_NW1          8:1          //FIXED Own IP address Net A 
-MY_IP_NW1_B1           8:xa1        //IP address Network A byte 1
-MY_IP_NW1_B2           8:xa2        //IP address Network A byte 2
-MY_IP_NW1_B3           8:xa3        //IP address Network A byte 3
-MY_IP_NW1_B4           8:xa4        //IP address Network A byte 4
+MY_IP_NW1_B1           8:xa1        //IP address Network A byte 1   CONFIGURABLE
+MY_IP_NW1_B2           8:xa2        //IP address Network A byte 2   CONFIGURABLE
+MY_IP_NW1_B3           8:xa3        //IP address Network A byte 3   CONFIGURABLE
+MY_IP_NW1_B4           8:xa4        //IP address Network A byte 4   CONFIGURABLE
 
 //Network B IP address
 [CONFIG]
 CFG_MY_IP_NW2          8:2          //FIXED Own IP address Net B
-MY_IP_NW2_B1           8:xb1        //IP address Network B byte 1
-MY_IP_NW2_B2           8:xb2        //IP address Network B byte 2
-MY_IP_NW2_B3           8:xb3        //IP address Network B byte 3
-MY_IP_NW2_B4           8:xb4        //IP address Network B byte 4
+MY_IP_NW2_B1           8:xb1        //IP address Network B byte 1   CONFIGURABLE
+MY_IP_NW2_B2           8:xb2        //IP address Network B byte 2   CONFIGURABLE
+MY_IP_NW2_B3           8:xb3        //IP address Network B byte 3   CONFIGURABLE
+MY_IP_NW2_B4           8:xb4        //IP address Network B byte 4   CONFIGURABLE
 
 //Network A & B subnet masks
 [CONFIG]
 CFG_MY_MASK            8:5          //FIXED configuration of subnet mask
 RESERVED               3:0
-MY_MASK_NW1            5:xx          //Subnet mask in CIDR notation Net A
+MY_MASK_NW1            5:xx          //Subnet mask in CIDR notation Net A   CONFIGURABLE
 RESERVED               3:0
-MY_MASK_NW2            5:xx          //Subnet mask in CIDR notation Net B
+MY_MASK_NW2            5:xx          //Subnet mask in CIDR notation Net B   CONFIGURABLE
 
 //Network A Default Gateway
 [CONFIG]
 CFG_DFLT_GTWY_IP       8:18         //FIXED Default gateway Net A
-DFLT_GTWY_IP_B1        8:xa1        //Default gateway IP address Net A, byte 1
-DFLT_GTWY_IP_B2        8:xa2        //Default gateway IP address Net A, byte 2
-DFLT_GTWY_IP_B3        8:xa3        //Default gateway IP address Net A, byte 3
-DFLT_GTWY_IP_B4        8:xa4        //Default gateway IP address Net A, byte 4
+DFLT_GTWY_IP_B1        8:xa1        //Default gateway IP address Net A, byte 1  CONFIGURABLE
+DFLT_GTWY_IP_B2        8:xa2        //Default gateway IP address Net A, byte 2  CONFIGURABLE
+DFLT_GTWY_IP_B3        8:xa3        //Default gateway IP address Net A, byte 3  CONFIGURABLE
+DFLT_GTWY_IP_B4        8:xa4        //Default gateway IP address Net A, byte 4  CONFIGURABLE
 
 //Network B Default Gateway
 [CONFIG]
 CFG_DFLT_GTWY_IP       8:19         //FIXED Default gateway Net B
-DFLT_GTWY_IP_B1        8:xb1        //Default gateway IP address Net B, byte 1
-DFLT_GTWY_IP_B2        8:xb2        //Default gateway IP address Net B, byte 2
-DFLT_GTWY_IP_B3        8:xb3        //Default gateway IP address Net B, byte 3
-DFLT_GTWY_IP_B4        8:xb4        //Default gateway IP address Net B, byte 4
+DFLT_GTWY_IP_B1        8:xb1        //Default gateway IP address Net B, byte 1  CONFIGURABLE
+DFLT_GTWY_IP_B2        8:xb2        //Default gateway IP address Net B, byte 2  CONFIGURABLE
+DFLT_GTWY_IP_B3        8:xb3        //Default gateway IP address Net B, byte 3  CONFIGURABLE
+DFLT_GTWY_IP_B4        8:xb4        //Default gateway IP address Net B, byte 4  CONFIGURABLE
 
 //End basic network settings
 //-------------------------------------------------------------------------------------
@@ -73,18 +73,18 @@ DFLT_GTWY_IP_B4        8:xb4        //Default gateway IP address Net B, byte 4
 //IP address Network A
 [CONFIG]
 CFG_INT_ID_DEST_NW1    8:32         //FIXED Net A IP address for INT_ID_DEST=0
-DEST_IP_INT_ID_NW1_B1  8:xa1        //Destination IP address Net A, byte 1
-DEST_IP_INT_ID_NW1_B2  8:xa2        //Destination IP address Net A, byte 2
-DEST_IP_INT_ID_NW1_B3  8:xa3        //Destination IP address Net A, byte 3
-DEST_IP_INT_ID_NW1_B4  8:xa4        //Destination IP address Net A, byte 4
+DEST_IP_INT_ID_NW1_B1  8:xa1        //Destination IP address Net A, byte 1  CONFIGURABLE
+DEST_IP_INT_ID_NW1_B2  8:xa2        //Destination IP address Net A, byte 2  CONFIGURABLE
+DEST_IP_INT_ID_NW1_B3  8:xa3        //Destination IP address Net A, byte 3  CONFIGURABLE
+DEST_IP_INT_ID_NW1_B4  8:xa4        //Destination IP address Net A, byte 4  CONFIGURABLE
 
 //IP address Network B
 [CONFIG]
 CFG_INT_ID_DEST_NW2    8:48         //FIXED Net B IP address for INT_ID_DEST=0
-DEST_IP_INT_ID_NW2_B1  8:xb1        //Destination IP address Net B, byte 1
-DEST_IP_INT_ID_NW2_B2  8:xb2        //Destination IP address Net B, byte 2
-DEST_IP_INT_ID_NW2_B3  8:xb3        //Destination IP address Net B, byte 3
-DEST_IP_INT_ID_NW2_B4  8:xb4        //Destination IP address Net B, byte 4
+DEST_IP_INT_ID_NW2_B1  8:xb1        //Destination IP address Net B, byte 1  CONFIGURABLE
+DEST_IP_INT_ID_NW2_B2  8:xb2        //Destination IP address Net B, byte 2  CONFIGURABLE
+DEST_IP_INT_ID_NW2_B3  8:xb3        //Destination IP address Net B, byte 3  CONFIGURABLE
+DEST_IP_INT_ID_NW2_B4  8:xb4        //Destination IP address Net B, byte 4  CONFIGURABLE
 
 //transmit diagnostic info to FDS
 [CONFIG]
@@ -98,48 +98,29 @@ INT_ID_DEST            4:0         //Internal destination to send data to
 //-------------------------------------------------------------------------------------
 //Configure 2nd remote destination (INT_ID_DEST=1)
 
-//*Evaluator Name*
+//TF
 
 //Destination IP address Network A
 [CONFIG]
 CFG_INT_ID_DEST_NW1    8:33         //FIXED Net A IP address for INT_ID_DEST=1
-DEST_IP_INT_ID_NW1_B1  8:xa1        //Destination IP address Net A, byte 1
-DEST_IP_INT_ID_NW1_B2  8:xa2        //Destination IP address Net A, byte 2
-DEST_IP_INT_ID_NW1_B3  8:xa3        //Destination IP address Net A, byte 3
-DEST_IP_INT_ID_NW1_B4  8:xa4        //Destination IP address Net A, byte 4
+DEST_IP_INT_ID_NW1_B1  8:xa1        //Destination IP address Net A, byte 1  CONFIGURABLE
+DEST_IP_INT_ID_NW1_B2  8:xa2        //Destination IP address Net A, byte 2  CONFIGURABLE
+DEST_IP_INT_ID_NW1_B3  8:xa3        //Destination IP address Net A, byte 3  CONFIGURABLE
+DEST_IP_INT_ID_NW1_B4  8:xa4        //Destination IP address Net A, byte 4  CONFIGURABLE
 
 //Destination IP address Network B
 [CONFIG]
 CFG_INT_ID_DEST_NW2    8:49         //FIXED Net B IP address for INT_ID_DEST=1
-DEST_IP_INT_ID_NW2_B1  8:xb1        //Destination IP address Net B, byte 1
-DEST_IP_INT_ID_NW2_B2  8:xb2        //Destination IP address Net B, byte 2
-DEST_IP_INT_ID_NW2_B3  8:xb3        //Destination IP address Net B, byte 3
-DEST_IP_INT_ID_NW2_B4  8:xb4        //Destination IP address Net B, byte 4
+DEST_IP_INT_ID_NW2_B1  8:xb1        //Destination IP address Net B, byte 1  CONFIGURABLE
+DEST_IP_INT_ID_NW2_B2  8:xb2        //Destination IP address Net B, byte 2  CONFIGURABLE
+DEST_IP_INT_ID_NW2_B3  8:xb3        //Destination IP address Net B, byte 3  CONFIGURABLE
+DEST_IP_INT_ID_NW2_B4  8:xb4        //Destination IP address Net B, byte 4  CONFIGURABLE
 
-//Evaluator <> Evaluator data transmission
-
-//Data sent:
-
-DELETE THIS LINE -  if no CFG_FWRD_ACD blocks required then enter //None
-
-//Data from ZPaaaa required by ZPbbbb for track section tttt
+//transmit diagnostic info to TF
 [CONFIG]
-CFG_FWRD_ACD           8:9          //FIXED forwarding of axle counter data
-INT_ID_DEST            4:1          //Internal destination to send data to
-CAN_TX_ID             12:aaaa       //ID of AEB which transmits the count
-
-//Data from ZPaaaa required by ZPbbbb for track section tttt
-[CONFIG]
-CFG_FWRD_ACD           8:9          //FIXED forwarding of axle counter data
-INT_ID_DEST            4:1          //Internal destination to send data to
-CAN_TX_ID             12:aaaa       //ID of AEB which transmits the count
-
-DELETE THIS LINE - Placeholder for further CFG_FWRD_ACD blocks when required 
-
-//Data received:
-
-DELETE THIS LINE - if no data recieved then enter //None
-DELETE THIS LINE - Use multiple copies of the following comment to complete this section //ZPbbbb required by ZPaaaa for track section tttt
+CFG_FWRD_DIAG          8:11        //FIXED forwarding diagnostic messages
+RESERVED               4:0
+INT_ID_DEST            4:1         //Internal destination to send data to
 
 //End 2nd remote destination
 //-------------------------------------------------------------------------------------
@@ -147,50 +128,7 @@ DELETE THIS LINE - Use multiple copies of the following comment to complete this
 //-------------------------------------------------------------------------------------
 //Configure 3rd remote destination (INT_ID_DEST=2)
 
-//*Evaluator Name*
 
-//Destination IP address Network A
-[CONFIG]
-CFG_INT_ID_DEST_NW1    8:34         //FIXED Net A IP address for INT_ID_DEST=2
-DEST_IP_INT_ID_NW1_B1  8:xa1        //Destination IP address Net A, byte 1
-DEST_IP_INT_ID_NW1_B2  8:xa2        //Destination IP address Net A, byte 2
-DEST_IP_INT_ID_NW1_B3  8:xa3        //Destination IP address Net A, byte 3
-DEST_IP_INT_ID_NW1_B4  8:xa4        //Destination IP address Net A, byte 4
-
-//Destination IP address Network B
-[CONFIG]
-CFG_INT_ID_DEST_NW2    8:50         //FIXED Net B IP address for INT_ID_DEST=2
-DEST_IP_INT_ID_NW2_B1  8:xb1        //Destination IP address Net B, byte 1
-DEST_IP_INT_ID_NW2_B2  8:xb2        //Destination IP address Net B, byte 2
-DEST_IP_INT_ID_NW2_B3  8:xb3        //Destination IP address Net B, byte 3
-DEST_IP_INT_ID_NW2_B4  8:xb4        //Destination IP address Net B, byte 4
-
-//Evaluator <> Evaluator data transmission
-
-//Data sent:
-
-DELETE THIS LINE -  if no CFG_FWRD_ACD blocks required then enter //None
-
-//Data from ZPaaaa required by ZPbbbb for track section tttt
-[CONFIG]
-CFG_FWRD_ACD           8:9          //FIXED forwarding of axle counter data
-INT_ID_DEST            4:2          //Internal destination to send data to
-CAN_TX_ID             12:aaaa       //ID of AEB which transmits the count
-
-//Data from ZPaaaa required by ZPbbbb for track section tttt
-[CONFIG]
-CFG_FWRD_ACD           8:9          //FIXED forwarding of axle counter data
-INT_ID_DEST            4:2          //Internal destination to send data to
-CAN_TX_ID             12:aaaa       //ID of AEB which transmits the count
-
-DELETE THIS LINE - Placeholder for further CFG_FWRD_ACD blocks when required 
-
-//Data received:
-
-DELETE THIS LINE - if no data recieved then enter //None
-DELETE THIS LINE - Use multiple copies of the following comment to complete this section //ZPbbbb required by ZPaaaa for track section tttt
-
-//End 3rd remote destination
 //-------------------------------------------------------------------------------------
 
 DELETE THIS LINE - Placeholder for further remote destinations when required
@@ -212,34 +150,34 @@ DELETE THIS LINE - Placeholder for further remote destinations when required
 //iiii Primary Network A
 [CONFIG]
 CFG_IXL_IP_ADDR        8:70         //FIXED IXL IP address Net A
-IXL_IP_ADDR_BYTE1      8:xa1        //IXL IP address Net A, byte 1
-IXL_IP_ADDR_BYTE2      8:xa2        //IXL IP address Net A, byte 2
-IXL_IP_ADDR_BYTE3      8:xa3        //IXL IP address Net A, byte 3
-IXL_IP_ADDR_BYTE4      8:xa4        //IXL IP address Net A, byte 4
+IXL_IP_ADDR_BYTE1      8:xa1        //IXL IP address Net A, byte 1  CONFIGURABLE
+IXL_IP_ADDR_BYTE2      8:xa2        //IXL IP address Net A, byte 2  CONFIGURABLE
+IXL_IP_ADDR_BYTE3      8:xa3        //IXL IP address Net A, byte 3  CONFIGURABLE
+IXL_IP_ADDR_BYTE4      8:xa4        //IXL IP address Net A, byte 4  CONFIGURABLE
 
 //iiii Primary Network B
 [CONFIG]
 CFG_IXL_IP_ADDR        8:71         //FIXED IXL IP address Net B
-IXL_IP_ADDR_BYTE1      8:xb1        //IXL IP address Net B, byte 1
-IXL_IP_ADDR_BYTE2      8:xb2        //IXL IP address Net B, byte 2
-IXL_IP_ADDR_BYTE3      8:xb3        //IXL IP address Net B, byte 3
-IXL_IP_ADDR_BYTE4      8:xb4        //IXL IP address Net B, byte 4
+IXL_IP_ADDR_BYTE1      8:xb1        //IXL IP address Net B, byte 1  CONFIGURABLE
+IXL_IP_ADDR_BYTE2      8:xb2        //IXL IP address Net B, byte 2  CONFIGURABLE
+IXL_IP_ADDR_BYTE3      8:xb3        //IXL IP address Net B, byte 3  CONFIGURABLE
+IXL_IP_ADDR_BYTE4      8:xb4        //IXL IP address Net B, byte 4  CONFIGURABLE
 
 //iiii Secondary Network A
 [CONFIG]
 CFG_IXL_IP_ADDR        8:70         //FIXED IXL IP address Net A
-IXL_IP_ADDR_BYTE1      8:xa1        //IXL IP address Net A, byte 1
-IXL_IP_ADDR_BYTE2      8:xa2        //IXL IP address Net A, byte 2
-IXL_IP_ADDR_BYTE3      8:xa3        //IXL IP address Net A, byte 3
-IXL_IP_ADDR_BYTE4      8:xa4        //IXL IP address Net A, byte 4
+IXL_IP_ADDR_BYTE1      8:xa1        //IXL IP address Net A, byte 1  CONFIGURABLE
+IXL_IP_ADDR_BYTE2      8:xa2        //IXL IP address Net A, byte 2  CONFIGURABLE
+IXL_IP_ADDR_BYTE3      8:xa3        //IXL IP address Net A, byte 3  CONFIGURABLE
+IXL_IP_ADDR_BYTE4      8:xa4        //IXL IP address Net A, byte 4  CONFIGURABLE
 
 //iiii Secondary Network B
 [CONFIG]
 CFG_IXL_IP_ADDR        8:71         //FIXED IXL IP address Net B
-IXL_IP_ADDR_BYTE1      8:xb1        //IXL IP address Net B, byte 1
-IXL_IP_ADDR_BYTE2      8:xb2        //IXL IP address Net B, byte 2
-IXL_IP_ADDR_BYTE3      8:xb3        //IXL IP address Net B, byte 3
-IXL_IP_ADDR_BYTE4      8:xb4        //IXL IP address Net B, byte 4
+IXL_IP_ADDR_BYTE1      8:xb1        //IXL IP address Net B, byte 1  CONFIGURABLE
+IXL_IP_ADDR_BYTE2      8:xb2        //IXL IP address Net B, byte 2  CONFIGURABLE
+IXL_IP_ADDR_BYTE3      8:xb3        //IXL IP address Net B, byte 3  CONFIGURABLE
+IXL_IP_ADDR_BYTE4      8:xb4        //IXL IP address Net B, byte 4  CONFIGURABLE
 
 //End IXL IP addresses
 //-------------------------------------------------------------------------------------
@@ -258,24 +196,24 @@ WNC_SST                7:11         //FIXED Source System Type (TRAIN DETECTION 
 [CONFIG]
 CFG_WNC_DA             8:72         //FIXED WNC Destination Address
 RESERVED               3:0
-WNC_DA                21:iiii       //WESTRACE Address of IXL (source in IFC file)
+WNC_DA                21:iiii       //WESTRACE Address of IXL (source in IFC file) CONFIGURABLE
 
 [CONFIG]
 CFG_WNC_SA             8:73         //FIXED WNC Source Address
 RESERVED               3:0
-WNC_SA                21:address       //WESTRACE Address of COM-WNC (dest in IFC file)
+WNC_SA                21:       //WESTRACE Address of COM-WNC (dest in IFC file) CONFIGURABLE
 
 [CONFIG]
 CFG_WNC_PDV_CI         8:78         //FIXED WNC Product Data Ver & Compatibility Index
 RESERVED               1:0
 CI                     7:1          //FIXED CI = 1 for operational systems
 RESERVED               1:0
-PDV                    7:xx         //Product Data Version PDV (major ver of IFC file)
+PDV                    7:xx         //Product Data Version PDV (major ver of IFC file)  CONFIGURABLE
 
 [CONFIG]
 CFG_WNC_DP_SP          8:74         //FIXED WNC Ports
 WNC_SP                 8:1          //FIXED Source Port of the COM-WNC = 1
-WNC_DP                 8:xx         //Destination Port of IXL (source port in IFC file)
+WNC_DP                 8:xx         //Destination Port of IXL (source port in IFC file) CONFIGURABLE
 
 //End WNC message addressing
 //-------------------------------------------------------------------------------------
@@ -305,187 +243,6 @@ TIME_OCC_EXT           8:0          //FIXED no occupation extension in COM-WNC
 //-------------------------------------------------------------------------------------
 //Configure data on WNC link
 
-//TRACK SECTION     tttt (FMA1) / tttt (FMA2) / *treadlename*
-[CONFIG]
-CFG_APPDATA_FADC       8:64
-ZP                     1:B          //Do(1) or do not(0) transfer PD (treadle) to IXL
-SPEED                  1:0          //FIXED do not send (prohibited by Frauscher)
-WHEEL_DIAMETER         1:0          //FIXED do not send (prohibited by Frauscher)
-IO_DATA                1:0          //FIXED do not send (prohibited by Frauscher)
-RESERVED               4:0
-FMA1                   1:B          //Do(1) or do not(0) transfer FMA1 to IXL
-FMA1_COUNT             1:0          //FIXED do not send (prohibited by Frauscher)
-FMA1_TRAIN_LENGTH      1:0          //FIXED do not send (prohibited by Frauscher)
-FMA2                   1:B          //Do(1) or do not(0) transfer FMA2 to IXL
-FMA2_COUNT             1:0          //FIXED do not send (prohibited by Frauscher)
-FMA2_TRAIN_LENGTH      1:0          //FIXED do not send (prohibited by Frauscher)
-RESERVED               3:0
-SLCT_TIMEOUT           3:0          //FIXED Timeout 0 used
-CAN_TX_ID             12:aaaa       //CAN sender ID (ID of the AEB to be output)
-
-//TRACK SECTION     tttt (FMA1) / tttt (FMA2) / *treadlename*
-[CONFIG]
-CFG_APPDATA_FADC       8:64
-ZP                     1:B          //Do(1) or do not(0) transfer PD (treadle) to IXL
-SPEED                  1:0          //FIXED do not send (prohibited by Frauscher)
-WHEEL_DIAMETER         1:0          //FIXED do not send (prohibited by Frauscher)
-IO_DATA                1:0          //FIXED do not send (prohibited by Frauscher)
-RESERVED               4:0
-FMA1                   1:B          //Do(1) or do not(0) transfer FMA1 to IXL
-FMA1_COUNT             1:0          //FIXED do not send (prohibited by Frauscher)
-FMA1_TRAIN_LENGTH      1:0          //FIXED do not send (prohibited by Frauscher)
-FMA2                   1:B          //Do(1) or do not(0) transfer FMA2 to IXL
-FMA2_COUNT             1:0          //FIXED do not send (prohibited by Frauscher)
-FMA2_TRAIN_LENGTH      1:0          //FIXED do not send (prohibited by Frauscher)
-RESERVED               3:0
-SLCT_TIMEOUT           3:0          //FIXED Timeout 0 used
-CAN_TX_ID             12:aaaa       //CAN sender ID (ID of the AEB to be output)
-
-//TRACK SECTION     tttt (FMA1) / tttt (FMA2) / *treadlename*
-[CONFIG]
-CFG_APPDATA_FADC       8:64
-ZP                     1:B          //Do(1) or do not(0) transfer PD (treadle) to IXL
-SPEED                  1:0          //FIXED do not send (prohibited by Frauscher)
-WHEEL_DIAMETER         1:0          //FIXED do not send (prohibited by Frauscher)
-IO_DATA                1:0          //FIXED do not send (prohibited by Frauscher)
-RESERVED               4:0
-FMA1                   1:B          //Do(1) or do not(0) transfer FMA1 to IXL
-FMA1_COUNT             1:0          //FIXED do not send (prohibited by Frauscher)
-FMA1_TRAIN_LENGTH      1:0          //FIXED do not send (prohibited by Frauscher)
-FMA2                   1:B          //Do(1) or do not(0) transfer FMA2 to IXL
-FMA2_COUNT             1:0          //FIXED do not send (prohibited by Frauscher)
-FMA2_TRAIN_LENGTH      1:0          //FIXED do not send (prohibited by Frauscher)
-RESERVED               3:0
-SLCT_TIMEOUT           3:0          //FIXED Timeout 0 used
-CAN_TX_ID             12:aaaa       //CAN sender ID (ID of the AEB to be output)
-
-//TRACK SECTION     tttt (FMA1) / tttt (FMA2) / *treadlename*
-[CONFIG]
-CFG_APPDATA_FADC       8:64
-ZP                     1:B          //Do(1) or do not(0) transfer PD (treadle) to IXL
-SPEED                  1:0          //FIXED do not send (prohibited by Frauscher)
-WHEEL_DIAMETER         1:0          //FIXED do not send (prohibited by Frauscher)
-IO_DATA                1:0          //FIXED do not send (prohibited by Frauscher)
-RESERVED               4:0
-FMA1                   1:B          //Do(1) or do not(0) transfer FMA1 to IXL
-FMA1_COUNT             1:0          //FIXED do not send (prohibited by Frauscher)
-FMA1_TRAIN_LENGTH      1:0          //FIXED do not send (prohibited by Frauscher)
-FMA2                   1:B          //Do(1) or do not(0) transfer FMA2 to IXL
-FMA2_COUNT             1:0          //FIXED do not send (prohibited by Frauscher)
-FMA2_TRAIN_LENGTH      1:0          //FIXED do not send (prohibited by Frauscher)
-RESERVED               3:0
-SLCT_TIMEOUT           3:0          //FIXED Timeout 0 used
-CAN_TX_ID             12:aaaa       //CAN sender ID (ID of the AEB to be output)
-
-//TRACK SECTION     tttt (FMA1) / tttt (FMA2) / *treadlename*
-[CONFIG]
-CFG_APPDATA_FADC       8:64
-ZP                     1:B          //Do(1) or do not(0) transfer PD (treadle) to IXL
-SPEED                  1:0          //FIXED do not send (prohibited by Frauscher)
-WHEEL_DIAMETER         1:0          //FIXED do not send (prohibited by Frauscher)
-IO_DATA                1:0          //FIXED do not send (prohibited by Frauscher)
-RESERVED               4:0
-FMA1                   1:B          //Do(1) or do not(0) transfer FMA1 to IXL
-FMA1_COUNT             1:0          //FIXED do not send (prohibited by Frauscher)
-FMA1_TRAIN_LENGTH      1:0          //FIXED do not send (prohibited by Frauscher)
-FMA2                   1:B          //Do(1) or do not(0) transfer FMA2 to IXL
-FMA2_COUNT             1:0          //FIXED do not send (prohibited by Frauscher)
-FMA2_TRAIN_LENGTH      1:0          //FIXED do not send (prohibited by Frauscher)
-RESERVED               3:0
-SLCT_TIMEOUT           3:0          //FIXED Timeout 0 used
-CAN_TX_ID             12:aaaa       //CAN sender ID (ID of the AEB to be output)
-
-//TRACK SECTION     tttt (FMA1) / tttt (FMA2) / *treadlename*
-[CONFIG]
-CFG_APPDATA_FADC       8:64
-ZP                     1:B          //Do(1) or do not(0) transfer PD (treadle) to IXL
-SPEED                  1:0          //FIXED do not send (prohibited by Frauscher)
-WHEEL_DIAMETER         1:0          //FIXED do not send (prohibited by Frauscher)
-IO_DATA                1:0          //FIXED do not send (prohibited by Frauscher)
-RESERVED               4:0
-FMA1                   1:B          //Do(1) or do not(0) transfer FMA1 to IXL
-FMA1_COUNT             1:0          //FIXED do not send (prohibited by Frauscher)
-FMA1_TRAIN_LENGTH      1:0          //FIXED do not send (prohibited by Frauscher)
-FMA2                   1:B          //Do(1) or do not(0) transfer FMA2 to IXL
-FMA2_COUNT             1:0          //FIXED do not send (prohibited by Frauscher)
-FMA2_TRAIN_LENGTH      1:0          //FIXED do not send (prohibited by Frauscher)
-RESERVED               3:0
-SLCT_TIMEOUT           3:0          //FIXED Timeout 0 used
-CAN_TX_ID             12:aaaa       //CAN sender ID (ID of the AEB to be output)
-
-//TRACK SECTION     tttt (FMA1) / tttt (FMA2) / *treadlename*
-[CONFIG]
-CFG_APPDATA_FADC       8:64
-ZP                     1:B          //Do(1) or do not(0) transfer PD (treadle) to IXL
-SPEED                  1:0          //FIXED do not send (prohibited by Frauscher)
-WHEEL_DIAMETER         1:0          //FIXED do not send (prohibited by Frauscher)
-IO_DATA                1:0          //FIXED do not send (prohibited by Frauscher)
-RESERVED               4:0
-FMA1                   1:B          //Do(1) or do not(0) transfer FMA1 to IXL
-FMA1_COUNT             1:0          //FIXED do not send (prohibited by Frauscher)
-FMA1_TRAIN_LENGTH      1:0          //FIXED do not send (prohibited by Frauscher)
-FMA2                   1:B          //Do(1) or do not(0) transfer FMA2 to IXL
-FMA2_COUNT             1:0          //FIXED do not send (prohibited by Frauscher)
-FMA2_TRAIN_LENGTH      1:0          //FIXED do not send (prohibited by Frauscher)
-RESERVED               3:0
-SLCT_TIMEOUT           3:0          //FIXED Timeout 0 used
-CAN_TX_ID             12:aaaa       //CAN sender ID (ID of the AEB to be output)
-
-//TRACK SECTION     tttt (FMA1) / tttt (FMA2) / *treadlename*
-[CONFIG]
-CFG_APPDATA_FADC       8:64
-ZP                     1:B          //Do(1) or do not(0) transfer PD (treadle) to IXL
-SPEED                  1:0          //FIXED do not send (prohibited by Frauscher)
-WHEEL_DIAMETER         1:0          //FIXED do not send (prohibited by Frauscher)
-IO_DATA                1:0          //FIXED do not send (prohibited by Frauscher)
-RESERVED               4:0
-FMA1                   1:B          //Do(1) or do not(0) transfer FMA1 to IXL
-FMA1_COUNT             1:0          //FIXED do not send (prohibited by Frauscher)
-FMA1_TRAIN_LENGTH      1:0          //FIXED do not send (prohibited by Frauscher)
-FMA2                   1:B          //Do(1) or do not(0) transfer FMA2 to IXL
-FMA2_COUNT             1:0          //FIXED do not send (prohibited by Frauscher)
-FMA2_TRAIN_LENGTH      1:0          //FIXED do not send (prohibited by Frauscher)
-RESERVED               3:0
-SLCT_TIMEOUT           3:0          //FIXED Timeout 0 used
-CAN_TX_ID             12:aaaa       //CAN sender ID (ID of the AEB to be output)
-
-//TRACK SECTION     tttt (FMA1) / tttt (FMA2) / *treadlename*
-[CONFIG]
-CFG_APPDATA_FADC       8:64
-ZP                     1:B          //Do(1) or do not(0) transfer PD (treadle) to IXL
-SPEED                  1:0          //FIXED do not send (prohibited by Frauscher)
-WHEEL_DIAMETER         1:0          //FIXED do not send (prohibited by Frauscher)
-IO_DATA                1:0          //FIXED do not send (prohibited by Frauscher)
-RESERVED               4:0
-FMA1                   1:B          //Do(1) or do not(0) transfer FMA1 to IXL
-FMA1_COUNT             1:0          //FIXED do not send (prohibited by Frauscher)
-FMA1_TRAIN_LENGTH      1:0          //FIXED do not send (prohibited by Frauscher)
-FMA2                   1:B          //Do(1) or do not(0) transfer FMA2 to IXL
-FMA2_COUNT             1:0          //FIXED do not send (prohibited by Frauscher)
-FMA2_TRAIN_LENGTH      1:0          //FIXED do not send (prohibited by Frauscher)
-RESERVED               3:0
-SLCT_TIMEOUT           3:0          //FIXED Timeout 0 used
-CAN_TX_ID             12:aaaa       //CAN sender ID (ID of the AEB to be output)
-
-//TRACK SECTION     tttt (FMA1) / tttt (FMA2) / *treadlename*
-[CONFIG]
-CFG_APPDATA_FADC       8:64
-ZP                     1:B          //Do(1) or do not(0) transfer PD (treadle) to IXL
-SPEED                  1:0          //FIXED do not send (prohibited by Frauscher)
-WHEEL_DIAMETER         1:0          //FIXED do not send (prohibited by Frauscher)
-IO_DATA                1:0          //FIXED do not send (prohibited by Frauscher)
-RESERVED               4:0
-FMA1                   1:B          //Do(1) or do not(0) transfer FMA1 to IXL
-FMA1_COUNT             1:0          //FIXED do not send (prohibited by Frauscher)
-FMA1_TRAIN_LENGTH      1:0          //FIXED do not send (prohibited by Frauscher)
-FMA2                   1:B          //Do(1) or do not(0) transfer FMA2 to IXL
-FMA2_COUNT             1:0          //FIXED do not send (prohibited by Frauscher)
-FMA2_TRAIN_LENGTH      1:0          //FIXED do not send (prohibited by Frauscher)
-RESERVED               3:0
-SLCT_TIMEOUT           3:0          //FIXED Timeout 0 used
-CAN_TX_ID             12:aaaa       //CAN sender ID (ID of the AEB to be output)
-
-DELETE THIS LINE - Placeholder for further CFG_APPDATA_FADC blocks when required 
 
 //WNC Data Format
 [CONFIG]
@@ -521,11 +278,11 @@ TIMEOUT_VALUE          8:40         //FIXED FAdC time-out set at 400ms
 CFG_PROJECT_COM        8:13         //FIXED configuration of project number
 RESERVED               3:0
 CHECK_VERSION          1:0          //FIXED 'VERSION' of all files need not be the same
-PROJECT_NUMBER        20:NUM        //project number
+PROJECT_NUMBER        20:NUM        //project number CONFIGURABLE
 
 //End CAN bus transmission
 //-------------------------------------------------------------------------------------
 
 [PROTECTION]
 COMPONENT              8:109              //Id of component, in this case: COM-WNC101
-VERSION               48:0xYYYYMMDDhhmm   //time of data generation (0xYYYYMMDDhhmm)
+VERSION               48:0xYYYYMMDDhh   //time of data generation (0xYYYYMMDDhhmm)  CONFIGURABLE

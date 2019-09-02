@@ -2,7 +2,8 @@
 #define FMA_H
 
 #include <QDialog>
-
+#include <QTreeWidget>
+#include <QAction>
 struct axleHeadData {
     QString axleHead_ID;
     int directionInversion = 0;
@@ -35,12 +36,18 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    void onRemoveButtonClicked();
+
+    //void on_treeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
+
 private:
     Ui::FMA *ui;
 
     QVector<axleHeadData*> axleHeadArr;
 
     QString trackSection_Id;
+
+    QAction *action;
 };
 
 #endif // FMA_H

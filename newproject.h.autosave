@@ -94,6 +94,8 @@ public slots:
     void onRemoveButtonClicked();
     void onRemoveEvaluatorClicked();
     void onRemoveDataLinkClicked();
+    void onRemoveFile_AEB();
+    void onRemoveFile_COM();
 
 private slots:
 

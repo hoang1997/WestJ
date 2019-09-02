@@ -2,8 +2,7 @@
     <qresource prefix="/imgs"/>
     <qresource prefix="/data"/>
     <qresource prefix="/">
-        <file>NR_WNC_R2_AEB_NO_FMA.ADC</file>
         <file>NR_WNC_R2_AEB_FMA1.ADC</file>
-        <file>NR_WNC_R2_AEB_FMA1+2.ADC</file>
+        <file>NR_WNC_R2_COM_standalone.ADC</file>
     </qresource>
 </RCC>

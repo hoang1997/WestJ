@@ -30,6 +30,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
 //Open File Tool Bar
 void MainWindow::on_actionOpen_File_triggered()
 {
@@ -250,6 +251,7 @@ void MainWindow::on_actionSave_As_triggered()
         }
     }
 }
+
 
 //Search Button
 void MainWindow::on_pushButton_clicked()

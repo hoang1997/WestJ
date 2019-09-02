@@ -25,6 +25,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 CONFIG += c++11
 SOURCES += \
+        dataforwarding.cpp \
         fma.cpp \
         main.cpp \
         mainwindow.cpp \
@@ -33,6 +34,7 @@ SOURCES += \
         verify.cpp
 
 HEADERS += \
+        dataforwarding.h \
         fma.h \
         mainwindow.h \
         newproject.h \
@@ -40,6 +42,7 @@ HEADERS += \
         verify.h
 
 FORMS += \
+        dataforwarding.ui \
         fma.ui \
         mainwindow.ui \
         newproject.ui
@@ -51,3 +54,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     rsc.qrc
+
+RC_FILE = icon.rc

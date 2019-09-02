@@ -22,9 +22,12 @@ private:
 
     QVector<QString> setOriginalFile(QString fileName);
     QVector<QString> returnEdited_AEB(AEB*, QString projectNum);
-    QVector<QString> returnEdited_COM(COM*);
+    QVector<QString> returnEdited_COM(COM*, QString projectNum);
     QString returnStamp();
     QString timeCheck(QString);
+
+    std::vector<QString> returnEditedBlock_IP(std::vector<QString> infile, QVector<int>IP_Arr, size_t starting_pos);
+
 
 public:
     ProcessFiles(NewProject *np);

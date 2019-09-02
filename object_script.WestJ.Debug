@@ -1,0 +1,12 @@
+debug/dataforwarding.o
+debug/fma.o
+debug/main.o
+debug/mainwindow.o
+debug/newproject.o
+debug/processfiles.o
+debug/verify.o
+debug/qrc_rsc.o
+debug/moc_dataforwarding.o
+debug/moc_fma.o
+debug/moc_mainwindow.o
+debug/moc_newproject.o

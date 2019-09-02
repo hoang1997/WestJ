@@ -1,0 +1,12 @@
+release/dataforwarding.o
+release/fma.o
+release/main.o
+release/mainwindow.o
+release/newproject.o
+release/processfiles.o
+release/verify.o
+release/qrc_rsc.o
+release/moc_dataforwarding.o
+release/moc_fma.o
+release/moc_mainwindow.o
+release/moc_newproject.o

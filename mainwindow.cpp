@@ -9,20 +9,10 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    ui->treeWidget->setContextMenuPolicy(Qt::CustomContextMenu);
-
     connect(ui->treeWidget, SIGNAL(itemClicked(QTreeWidgetItem*, int)), this, SLOT(onProjectTreeWidgetClicked(QTreeWidgetItem*, int)));
     connect(ui->treeWidget_2, SIGNAL(itemClicked(QTreeWidgetItem*, int)), this, SLOT(onProjectTreeWidgetClicked_Verify(QTreeWidgetItem*, int)));
     ui->treeWidget->setHeaderLabel("Projects");
     ui->treeWidget_2->setHeaderLabel("Projects");
-    ui->treeWidget->setContextMenuPolicy(Qt::ActionsContextMenu);
-    ui->treeWidget_2->setContextMenuPolicy(Qt::ActionsContextMenu);
-    QStringList actions = (QStringList() << "Open File"<<"Remove File" << "Delete File" << "Rename");
-
-    for(QString action_item : actions) {
-        action = new QAction(action_item, this);
-        ui->treeWidget->addAction(action);
-    }
 }
 
 MainWindow::~MainWindow()
@@ -231,7 +221,6 @@ void MainWindow::openFile(QString fileName, QString ev)
         qDebug() << "Creating COM Chart";
     }
 }
-
 
 //Save As
 void MainWindow::on_actionSave_As_triggered()

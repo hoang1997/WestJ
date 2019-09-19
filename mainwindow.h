@@ -31,9 +31,7 @@ public:
 
 public slots:
 
-
 private slots:
-
 
     void on_actionOpen_File_triggered();
 
@@ -44,12 +42,12 @@ private slots:
     void on_actionOpen_Project_triggered();
 
     void onProjectTreeWidgetClicked(QTreeWidgetItem*, int);
+
     void onProjectTreeWidgetClicked_Verify(QTreeWidgetItem*, int);
 
     void openFile(QString, QString);
 
     void on_actionSave_As_triggered();
-
 
     void on_pushButton_clicked();
 

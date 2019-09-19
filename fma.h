@@ -38,8 +38,6 @@ private slots:
 
     void onRemoveButtonClicked();
 
-    //void on_treeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
-
 private:
     Ui::FMA *ui;
 

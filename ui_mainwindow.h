@@ -15,7 +15,6 @@
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
@@ -67,8 +66,6 @@ public:
     QTreeWidget *treeWidget_2;
     QListWidget *listWidget;
     QFrame *line;
-    QLabel *label;
-    QPlainTextEdit *plainTextEdit_2;
     QChartView *graphicsView;
     QMenuBar *menuBar;
     QMenu *menuFile;
@@ -217,17 +214,6 @@ public:
 
         verticalLayout->addWidget(line);
 
-        label = new QLabel(tab);
-        label->setObjectName(QString::fromUtf8("label"));
-
-        verticalLayout->addWidget(label);
-
-        plainTextEdit_2 = new QPlainTextEdit(tab);
-        plainTextEdit_2->setObjectName(QString::fromUtf8("plainTextEdit_2"));
-        plainTextEdit_2->setMaximumSize(QSize(16777215, 150));
-
-        verticalLayout->addWidget(plainTextEdit_2);
-
         tabWidget->addTab(tab, QString());
 
         verticalLayout_4->addWidget(tabWidget);
@@ -296,7 +282,6 @@ public:
         pushButton->setText(QCoreApplication::translate("MainWindow", "Search", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "Clear", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Edit ", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "Verification Output", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "Verify", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuProject->setTitle(QCoreApplication::translate("MainWindow", "Project", nullptr));

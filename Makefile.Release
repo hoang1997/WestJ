@@ -1511,8 +1511,6 @@ release/mainwindow.o: mainwindow.cpp mainwindow.h \
 		C:/Qt/5.13.0/mingw73_64/include/QtWidgets/qgridlayout.h \
 		C:/Qt/5.13.0/mingw73_64/include/QtWidgets/QHeaderView \
 		C:/Qt/5.13.0/mingw73_64/include/QtWidgets/qheaderview.h \
-		C:/Qt/5.13.0/mingw73_64/include/QtWidgets/QLabel \
-		C:/Qt/5.13.0/mingw73_64/include/QtWidgets/qlabel.h \
 		C:/Qt/5.13.0/mingw73_64/include/QtWidgets/QLineEdit \
 		C:/Qt/5.13.0/mingw73_64/include/QtWidgets/qlineedit.h \
 		C:/Qt/5.13.0/mingw73_64/include/QtWidgets/QListWidget \
@@ -1784,6 +1782,7 @@ release/mainwindow.o: mainwindow.cpp mainwindow.h \
 		C:/Qt/5.13.0/mingw73_64/include/QtWidgets/qitemeditorfactory.h \
 		C:/Qt/5.13.0/mingw73_64/include/QtWidgets/qkeyeventtransition.h \
 		C:/Qt/5.13.0/mingw73_64/include/QtWidgets/qkeysequenceedit.h \
+		C:/Qt/5.13.0/mingw73_64/include/QtWidgets/qlabel.h \
 		C:/Qt/5.13.0/mingw73_64/include/QtWidgets/qlcdnumber.h \
 		C:/Qt/5.13.0/mingw73_64/include/QtWidgets/qmdiarea.h \
 		C:/Qt/5.13.0/mingw73_64/include/QtWidgets/qmdisubwindow.h \

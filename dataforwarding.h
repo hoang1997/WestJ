@@ -24,8 +24,6 @@ public:
     explicit DataForwarding(QWidget *parent = nullptr);
     ~DataForwarding();
 
-
-
 private slots:
     void on_buttonBox_accepted();
 

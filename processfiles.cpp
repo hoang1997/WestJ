@@ -70,7 +70,7 @@ void ProcessFiles::writeFiles(QString projNum, QString dir)
         //loop through each AEB data created
         for(int i = 0; i < aebArr.size(); i++) {
             //create AEB File
-            QVector<QString> file = returnEdited_AEB(aebArr[i], projNum);
+            QVector<QString> file = returnEditedFile(aebArr[i], projNum);
             //Create File and File Name
             QFile outfile(path + "/C" + aebArr[i]->AEB_Id + "_00.ADC");
             //Check to see if the file can be opened, return an error if not
@@ -100,7 +100,7 @@ void ProcessFiles::writeFiles(QString projNum, QString dir)
     //Same concept with previous AEB data
     if(!comArr.empty()){
         for(int i = 0; i < comArr.size(); i++) {
-            QVector<QString> file = returnEdited_COM(comArr[i], projNum);
+            QVector<QString> file = returnEditedFile(comArr[i], projNum);
             QFile outfile(path + "/C" + comArr[i]->COM_ID + "_00.ADC");
             if(!outfile.open(QFile::WriteOnly | QFile::Text))
             {
@@ -128,7 +128,7 @@ void ProcessFiles::writeFiles(QString projNum, QString dir)
 }
 
 //Takes in AEB data and edits the template to return an array of strings which is the file
-QVector<QString> ProcessFiles::returnEdited_AEB(AEB *aebData, QString pn)
+QVector<QString> ProcessFiles::returnEditedFile(AEB *aebData, QString pn)
 {
     qDebug() << "Editing File";
     std::vector<QString> infile = orgAEB_File.toStdVector();
@@ -202,7 +202,7 @@ std::vector<QString> ProcessFiles::returnEditedBlock_IP(std::vector<QString> inf
 
 //Edits the template with COM data and then returns an array of strings
 //which can be used to write to a text file.
-QVector<QString> ProcessFiles::returnEdited_COM(COM * com, QString projectNum)
+QVector<QString> ProcessFiles::returnEditedFile(COM * com, QString projectNum)
 {
     std::vector<QString> infile = orgCOM_File.toStdVector();
     //Header -- WORKING
@@ -228,22 +228,23 @@ QVector<QString> ProcessFiles::returnEdited_COM(COM * com, QString projectNum)
     qDebug() << "Finished Basic Configuration";
 
     //Remote System - Working
-    infile[149].replace(infile[149].indexOf("iiii"), 5, com->COM_ID);
+    infile[149].replace(infile[149].indexOf("iiii"), 4, com->COM_ID);
     infile = returnEditedBlock_IP(infile, com->ACP_Primary_IP_A, 152);
 
-    infile[157].replace(infile[157].indexOf("iiii"), 5, com->COM_ID);
+    infile[157].replace(infile[157].indexOf("iiii"), 4, com->COM_ID);
     infile = returnEditedBlock_IP(infile, com->ACP_Primary_IP_B, 160);
 
-    infile[165].replace(infile[165].indexOf("iiii"), 5, com->COM_ID);
+    infile[165].replace(infile[165].indexOf("iiii"), 4, com->COM_ID);
     infile = returnEditedBlock_IP(infile, com->ACP_Secondary_IP_A, 168);
 
-    infile[173].replace(infile[173].indexOf("iiii"), 5, com->COM_ID);
+    infile[173].replace(infile[173].indexOf("iiii"), 4, com->COM_ID);
     infile = returnEditedBlock_IP(infile, com->ACP_Secondary_IP_B, 176);
     qDebug() << "Finished Remote System";
 
 
     //WNC Addressing - Working
-    infile[198].replace(infile[198].indexOf("iiii"), 4, QString::number(com->wnc_NetTraceID));
+    infile[198].replace(infile[198].indexOf(":") + 1, 4, QString::number(com->wnc_NetTraceID));
+    qDebug() << com->wnc_NetTraceID;
     infile[203].replace(infile[203].indexOf(":")+1, 4, QString::number(com->wnc_WestTraceAddress));
     infile[210].replace(infile[210].indexOf(":xx")+1, 4, QString::number(com->wnc_pdv));
     infile[215].replace(infile[215].indexOf(":xx")+1, 4, QString::number(com->wnc_DestPort));

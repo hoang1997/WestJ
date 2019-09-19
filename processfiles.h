@@ -21,8 +21,8 @@ private:
     QString projectNumber;
 
     QVector<QString> setOriginalFile(QString fileName);
-    QVector<QString> returnEdited_AEB(AEB*, QString projectNum);
-    QVector<QString> returnEdited_COM(COM*, QString projectNum);
+    QVector<QString> returnEditedFile(AEB*, QString projectNum);
+    QVector<QString> returnEditedFile(COM*, QString projectNum);
     QString returnStamp();
     QString timeCheck(QString);
 

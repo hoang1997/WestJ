@@ -94,9 +94,10 @@ public slots:
     void onRemoveButtonClicked();
     void onRemoveEvaluatorClicked();
     void onRemoveDataLinkClicked();
+    void onRemoveFile_AEB();
+    void onRemoveFile_COM();
 
 private slots:
-
 
     void on_pushButton_clicked();
 
@@ -109,7 +110,7 @@ private slots:
 
     void on_pushButton_3_clicked();
 
-    void onPreviewTreeWidgetClicked_aeb(QTreeWidgetItem *item, int column);
+
 
     void on_pushButton_7_clicked();
 
@@ -126,9 +127,7 @@ private slots:
     void on_pushButton_9_clicked();
 
 private:
-
     void clearComInterface();
-
 
     Ui::NewProject *ui;
     FMA *fma;

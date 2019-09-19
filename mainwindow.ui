@@ -154,23 +154,6 @@
             </property>
            </widget>
           </item>
-          <item>
-           <widget class="QLabel" name="label">
-            <property name="text">
-             <string>Verification Output</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPlainTextEdit" name="plainTextEdit_2">
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>150</height>
-             </size>
-            </property>
-           </widget>
-          </item>
          </layout>
         </widget>
        </widget>

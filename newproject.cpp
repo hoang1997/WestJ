@@ -35,6 +35,8 @@ NewProject::NewProject(QWidget *parent) :
     connect(ui->treeWidget_3, SIGNAL(itemClicked(QTreeWidgetItem*, int)), this, SLOT(onPreviewTreeWidgetClicked_aeb(QTreeWidgetItem*, int)));
 
     ui->treeWidget->setContextMenuPolicy(Qt::ActionsContextMenu);
+    ui->treeWidget_2->setContextMenuPolicy(Qt::ActionsContextMenu);
+    ui->treeWidget_3->setContextMenuPolicy(Qt::ActionsContextMenu);
     ui->treeWidget_5->setContextMenuPolicy(Qt::ActionsContextMenu);
     ui->treeWidget_6->setContextMenuPolicy(Qt::ActionsContextMenu);
     QAction *action = new QAction("Remove Section", this);
@@ -43,7 +45,13 @@ NewProject::NewProject(QWidget *parent) :
     connect(action2, &QAction::triggered, this, &NewProject::onRemoveEvaluatorClicked);
     QAction *action3 = new QAction("Remove AEB Data Link", this);
     connect(action3, &QAction::triggered, this, &NewProject::onRemoveDataLinkClicked);
+    QAction *action4 = new QAction("Remove AEB File", this);
+    connect(action4, &QAction::triggered, this, &NewProject::onRemoveButtonClicked);
+    QAction *action5 = new QAction("Remove COM File", this);
+    connect(action5, &QAction::triggered, this, &NewProject::onRemoveButtonClicked);
     ui->treeWidget->addAction(action);
+    ui->treeWidget_2->addAction(action4);
+    ui->treeWidget_3->addAction(action5);
     ui->treeWidget_5->addAction(action2);
     ui->treeWidget_6->addAction(action3);
 
@@ -81,7 +89,6 @@ NewProject::~NewProject()
 //-------------------------------------//
 void NewProject::fmaSignalReceived(FMA * fma)
 {
-
     fmaArr.push_back(fma);
     updateFMApreview(fma);
 }
@@ -126,7 +133,6 @@ void NewProject::on_pushButton_clicked()
     fma = new FMA();
     connect(fma, SIGNAL(fmaSignal(FMA*)), this, SLOT(fmaSignalReceived(FMA*)), Qt::UniqueConnection);
     fma->exec();
-
 }
 
 //------------------//
@@ -173,9 +179,17 @@ void NewProject::on_pushButton_2_clicked()
 
 }
 
-void NewProject::onPreviewTreeWidgetClicked_aeb(QTreeWidgetItem *item, int column)
+
+//Remove File from File Preview//
+void NewProject::onRemoveFile_AEB()
 {
-    qDebug() << item->text(column);
+    for(int i = 0; i < aebArr.size(); i++) {
+        if(ui->treeWidget_2->currentItem()->text(1) == aebArr[i]->AEB_Id) {
+            aebArr.remove(i);
+            ui->treeWidget_2->takeTopLevelItem(ui->treeWidget_2->currentIndex().row());
+            return;
+        }
+    }
 }
 
 //---------------------------------------------------------------------------------------------//
@@ -333,7 +347,7 @@ void NewProject::on_pushButton_8_clicked()
     QTreeWidgetItem *ntid = new QTreeWidgetItem(ui->treeWidget_4);
     ntid->setText(0, "WESTRACE ID");
     ntid->setText(1, QString::number(com->wnc_NetTraceID));
-
+    qDebug() << com->wnc_NetTraceID;
     com->wnc_WestTraceAddress = ui->lineEdit_7->text().toInt();
     QTreeWidgetItem *wta = new QTreeWidgetItem(ui->treeWidget_4);
     wta->setText(0, "WESTRACE Address");
@@ -709,6 +723,17 @@ void NewProject::onRemoveDataLinkClicked()
 void NewProject::dfbSignalReceived(QVector<DFB*> dfbArray)
 {
     dfbArr = dfbArray;
+}
+
+void NewProject::onRemoveFile_COM()
+{
+    for(int i = 0; i < comArr.size(); i++) {
+        if(ui->treeWidget_3->currentItem()->text(1) == comArr[i]->COM_ID) {
+            comArr.remove(i);
+            ui->treeWidget_3->takeTopLevelItem(ui->treeWidget_3->currentIndex().row());
+            return;
+        }
+    }
 }
 
 //---------------------------------------------------------------------------------------------//
